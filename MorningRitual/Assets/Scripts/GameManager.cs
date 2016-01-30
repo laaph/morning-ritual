@@ -3,6 +3,7 @@ using System.Collections;
 
 public class GameManager : MonoBehaviour {
 	private static GameManager instanceValue;
+	public GameObject initialRoom;
 
 	/// <summary>
 	/// Get the global GameManager instance.

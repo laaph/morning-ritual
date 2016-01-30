@@ -16,9 +16,9 @@ public class Arrow : MonoBehaviour {
 	
 	}
 	void OnMouseDown() {
-		gameObject.SetActive(false);
 		nextRoom.SetActive(true);
 		Camera.main.transform.position = nextRoom.GetComponentInChildren<RoomObjectManager>().cameraPosition;
+		gameObject.transform.parent.gameObject.SetActive(false);
 	}
 
 }
