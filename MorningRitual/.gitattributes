@@ -1,0 +1,7 @@
+*.meta eol=lf
+*.prefab eol=lf
+*.physicsMaterial2D eol=lf
+*.mat eol=lf
+*.anim eol=lf
+*.controller eol=lf
+*.cs eol=lf
