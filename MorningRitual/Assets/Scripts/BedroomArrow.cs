@@ -21,7 +21,7 @@ public class BedroomArrow : MonoBehaviour {
 		if(s.alarmRinging){
 			GameManager.Instance.ShowMessage("That alarm needs to stop now...");
 		} else {
-			GameManager.Instance.ShowMessage("I can't believe I managed to get out of bed with the alarm off");
+			GameManager.Instance.ShowMessage("I can't believe I managed to get\nout of bed with the alarm off.");
 		}
 		s.inBed = false;
 		s.HideGUI();
