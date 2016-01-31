@@ -11,10 +11,12 @@ public class Mug : MonoBehaviour {
 		TooCold,
 	}
 	public GameObject steamTooHot, steamJustRight;
+	public GameObject spill;
 	private State state = State.Empty;
 	private float coffeeTime;
 	public float cooldownTime1 = 4.0f;
 	public float cooldownTime2 = 4.0f;
+	public AudioClip audioPour, audioSpill, audioHot, audioYuck, audioYum;
 
 	// Use this for initialization
 	void Start () {
@@ -23,6 +25,11 @@ public class Mug : MonoBehaviour {
 		}
 		if (!this.steamTooHot) {
 			Debug.LogError("Mug is missing hot steam");
+		}
+		if (!this.spill) {
+			Debug.LogError("Mug is missing spill");
+		} else {
+			this.spill.SetActive(false);
 		}
 		this.UpdateSteam();
 	}
@@ -47,12 +54,16 @@ public class Mug : MonoBehaviour {
 	}
 
 	void OnMouseDown() {
+		AudioClip clip = null;
+		int points = 0;
 		switch (this.state) {
 			case State.Empty:
 				GameManager.Instance.ShowMessage("This cup is empty, like my life.");
 				break;
 			case State.TooHot:
 				GameManager.Instance.ShowMessage("Ouch, that coffee is HOT!");
+				clip = this.audioHot;
+				points = -50;
 				break;
 			case State.JustRight:
 				GameManager.Instance.ShowMessage("Nice, that sure was coffee!");
@@ -63,23 +74,41 @@ public class Mug : MonoBehaviour {
 				break;
 			case State.TooCold:
 				GameManager.Instance.ShowMessage("That coffee is cold and heartless, like my ex!");
-				GameManager.Instance.AwardPoints(-10, transform.position);
+				clip = this.audioYuck;
+				points = -25;
 				break;
+		}
+		if (points != 0) {
+			GameManager.Instance.AwardPoints(points, this.transform.position);
+		}
+		if (clip) {
+			var source = this.GetComponent<AudioSource>();
+			source.clip = clip;
+			source.Play();
 		}
 		this.state = State.Empty;
 		this.UpdateSteam();
 	}
 
 	public void AddCoffee() {
+		AudioClip clip;
 		if (this.state == State.Empty) {
 			GameManager.Instance.ShowMessage("I’ll just pour myself a cup of joe.");
 			this.coffeeTime = Time.time;
 			this.state = State.TooHot;
 			this.UpdateSteam();
+			clip = this.audioPour;
 		} else {
-			GameManager.Instance.ShowMessage("I already have coffee.");
-			// Spill the coffee
+			GameManager.Instance.ShowMessage("Shit, the mug was already full.");
+			if (this.spill) {
+				this.spill.SetActive(true);
+			}
+			GameManager.Instance.AwardPoints(-50, this.transform.position);
+			clip = this.audioSpill;
 		}
+		var source = this.GetComponent<AudioSource>();
+		source.clip = clip;
+		source.Play();
 	}
 
 	private void UpdateSteam() {
