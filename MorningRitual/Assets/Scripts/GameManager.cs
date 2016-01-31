@@ -4,6 +4,7 @@ using System.Collections;
 public class GameManager : MonoBehaviour {
 	private static GameManager instanceValue;
 	public GameObject initialRoom;
+	public MessageBox messageBox;
 
 	/// <summary>
 	/// Get the global GameManager instance.
@@ -50,5 +51,9 @@ public class GameManager : MonoBehaviour {
 	public void AwardPoints(int points, Vector3 position) {
 		Bubble.DisplayMessage(points.ToString("+#;-#"), position);
 		this.Score += points;
+	}
+
+	public void ShowMessage(string message) {
+		messageBox.ShowMessage(message);
 	}
 }

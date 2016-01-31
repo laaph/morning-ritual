@@ -26,5 +26,6 @@ public class UserObjectCommonFunctions : MonoBehaviour {
     }
 	void OnMouseDown() {
 		GameManager.Instance.AwardPoints(50, this.transform.position);
+		GameManager.Instance.ShowMessage("Oh, what a wonderful day!");
 	}
 }
