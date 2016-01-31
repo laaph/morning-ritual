@@ -71,7 +71,7 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void AddTime(int minutes){
-		timeCounter = timeCounter + minutes;
+		gameTimeCounter = gameTimeCounter + minutes;
 	}
 
 	public void ShowMessage(string message) {

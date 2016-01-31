@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class TimeDisplay : MonoBehaviour {
+public class GameTimeDisplay : MonoBehaviour {
 	private Text text;
 
 	// Use this for initialization
