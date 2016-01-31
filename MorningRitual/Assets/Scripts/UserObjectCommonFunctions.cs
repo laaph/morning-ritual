@@ -6,6 +6,7 @@ public class UserObjectCommonFunctions : MonoBehaviour {
 	public Color glowColor = Color.red;
 	public string onClickMessage = "";
 	public int 	  onClickPoints  = 0;
+	public bool   deactivateOnClick = false;
 
 	// Use this for initialization
 	void Start () {
@@ -32,8 +33,11 @@ public class UserObjectCommonFunctions : MonoBehaviour {
 			onClickMessage = "";
 		}
 		if(onClickPoints  !=  0) {
-			GameManager.Instance.AwardPoints(0, transform.position);
+			GameManager.Instance.AwardPoints(onClickPoints, transform.position);
 			onClickPoints = 0;
+		}
+		if(deactivateOnClick) {
+			gameObject.SetActive(false);
 		}
 	}
 

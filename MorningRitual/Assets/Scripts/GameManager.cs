@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour {
 	public MessageBox messageBox;
 	public bool pickedUpNewspaper = false;
 	public bool tookShower = false;
+	public bool hadCoffee = false;
 
 	/// <summary>
 	/// Get the global GameManager instance.

@@ -3,9 +3,13 @@ using System.Collections;
 
 public class Newspaper : MonoBehaviour {
 
+	public GameObject newspaperButton;
+
 	// Use this for initialization
 	void Start () {
-	
+		if (!this.newspaperButton) {
+			Debug.LogError("Newspaper missing readme button");
+		}	
 	}
 	
 	// Update is called once per frame
@@ -16,6 +20,7 @@ public class Newspaper : MonoBehaviour {
 		GameManager.Instance.pickedUpNewspaper = true;
 		GameManager.Instance.ShowMessage("I much prefer the newspaper to the\nradio or telly");
 		GameManager.Instance.AwardPoints(10, transform.position);
+		newspaperButton.SetActive(true);
 		gameObject.SetActive(false);
 	}
 }
