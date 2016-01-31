@@ -4,6 +4,8 @@ using System.Collections;
 public class UserObjectCommonFunctions : MonoBehaviour {
 	Renderer rend;
 	public Color glowColor = Color.red;
+	public string onClickMessage = "";
+	public int 	  onClickPoints  = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -25,8 +27,14 @@ public class UserObjectCommonFunctions : MonoBehaviour {
         rend.material.color = Color.white;
     }
 	void OnMouseDown() {
-	//	GameManager.Instance.AwardPoints(50, this.transform.position);
-	//	GameManager.Instance.ShowMessage("Oh, what a wonderful day!");
+		if(onClickMessage != "") {
+			GameManager.Instance.ShowMessage(onClickMessage);
+			onClickMessage = "";
+		}
+		if(onClickPoints  !=  0) {
+			GameManager.Instance.AwardPoints(0, transform.position);
+			onClickPoints = 0;
+		}
 	}
 
 }
