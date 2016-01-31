@@ -4,6 +4,7 @@ using System.Collections;
 public class RoomObjectManager : MonoBehaviour {
 
 	public Vector3 cameraPosition;
+	public Vector3 galePosition;
 	public bool isInitialRoom = false;
 
 	// Use this for initialization

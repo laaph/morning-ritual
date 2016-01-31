@@ -5,6 +5,7 @@ public class GameManager : MonoBehaviour {
 	private static GameManager instanceValue;
 	public GameObject initialRoom;
 	public MessageBox messageBox;
+	public bool pickedUpNewspaper = false;
 
 	/// <summary>
 	/// Get the global GameManager instance.
