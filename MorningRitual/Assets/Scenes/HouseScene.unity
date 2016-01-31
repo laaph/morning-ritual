@@ -285,7 +285,7 @@ GameObject:
   - 4: {fileID: 199361069}
   - 212: {fileID: 199361068}
   m_Layer: 0
-  m_Name: gale_standingPoses00001
+  m_Name: gale
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -317,7 +317,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 637f4b79406264832bf4279dd5e692ee, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bf30816924fe24719954db544948aabd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -638,6 +638,109 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 474956, guid: d165db99d7a864b738970120be64a8e1, type: 2}
   m_PrefabInternal: {fileID: 422517590}
+--- !u!1 &648332029
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 648332032}
+  - 212: {fileID: 648332031}
+  - 114: {fileID: 648332030}
+  - 60: {fileID: 648332033}
+  - 114: {fileID: 648332034}
+  m_Layer: 0
+  m_Name: mr_clothes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &648332030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 648332029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 137d489da239d4a7b8248610f34b4aa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  glowColor: {r: 1, g: 0, b: 0, a: 1}
+--- !u!212 &648332031
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 648332029}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_ReflectionProbeUsage: 0
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: 4bf7382c3ecc24581b6db2806c2d9bc5, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+--- !u!4 &648332032
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 648332029}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 17.511238, y: -4.28302, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+--- !u!60 &648332033
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 648332029}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: -1.8549999, y: 5.17}
+      - {x: -1.8549999, y: -5.17}
+      - {x: 1.8549999, y: -5.17}
+      - {x: 1.8549999, y: 5.17}
+--- !u!114 &648332034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 648332029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19df9560d33774487835c8bc41ecf9ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newClothes: {fileID: 21300000, guid: 637f4b79406264832bf4279dd5e692ee, type: 3}
 --- !u!4 &710177354 stripped
 Transform:
   m_PrefabParentObject: {fileID: 474956, guid: d165db99d7a864b738970120be64a8e1, type: 2}
@@ -1047,7 +1150,7 @@ Prefab:
       objectReference: {fileID: 1034641662}
     - target: {fileID: 11418428, guid: d165db99d7a864b738970120be64a8e1, type: 2}
       propertyPath: addText
-      value: I need a shower...
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d165db99d7a864b738970120be64a8e1, type: 2}
@@ -1954,6 +2057,7 @@ MonoBehaviour:
   initialRoom: {fileID: 2018135940}
   messageBox: {fileID: 914208044}
   pickedUpNewspaper: 0
+  tookShower: 0
 --- !u!4 &1517031562
 Transform:
   m_ObjectHideFlags: 0
@@ -2118,7 +2222,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 637f4b79406264832bf4279dd5e692ee, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bf30816924fe24719954db544948aabd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2287,7 +2391,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 129398, guid: ce024f7035e5e4840975d208ff98487f, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce024f7035e5e4840975d208ff98487f, type: 2}
