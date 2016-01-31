@@ -64,6 +64,7 @@ public class Clock : MonoBehaviour {
 		offButton.SetActive(false);
 	}
 	public void TurnOffAlarm() {
+		GameManager.Instance.AwardPoints(10, this.transform.position);
 		HideGUI();
 		alarmRinging = false;
 		transform.position = startPos;

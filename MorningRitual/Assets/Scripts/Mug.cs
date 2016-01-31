@@ -2,6 +2,8 @@
 using System.Collections;
 
 public class Mug : MonoBehaviour {
+
+	bool awardedPoints = false;
 	private enum State {
 		Empty,
 		TooHot,
@@ -54,9 +56,14 @@ public class Mug : MonoBehaviour {
 				break;
 			case State.JustRight:
 				GameManager.Instance.ShowMessage("Nice, that sure was coffee!");
+				if(!awardedPoints) {
+					GameManager.Instance.AwardPoints(50, transform.position);
+					awardedPoints = true;
+				}
 				break;
 			case State.TooCold:
 				GameManager.Instance.ShowMessage("That coffee is cold and heartless, like my ex!");
+				GameManager.Instance.AwardPoints(-10, transform.position);
 				break;
 		}
 		this.state = State.Empty;
