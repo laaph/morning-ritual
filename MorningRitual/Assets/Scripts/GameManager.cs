@@ -46,4 +46,9 @@ public class GameManager : MonoBehaviour {
 			instanceValue = null;
 		}
 	}
+
+	public void AwardPoints(int points, Vector3 position) {
+		Bubble.DisplayMessage(points.ToString("+#;-#"), position);
+		this.Score += points;
+	}
 }

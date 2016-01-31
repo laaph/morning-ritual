@@ -24,4 +24,7 @@ public class UserObjectCommonFunctions : MonoBehaviour {
     void OnMouseExit() {
         rend.material.color = Color.white;
     }
+	void OnMouseDown() {
+		GameManager.Instance.AwardPoints(50, this.transform.position);
+	}
 }
