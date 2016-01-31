@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour {
 	private int scoreValue;
 	public int Score {
 		get { return this.scoreValue; }
-		set {
+		private set {
 			if (value != this.scoreValue) {
 				this.scoreValue = value;
 				this.ScoreDidChange.Invoke();
@@ -45,5 +45,10 @@ public class GameManager : MonoBehaviour {
 		if (this == instanceValue) {
 			instanceValue = null;
 		}
+	}
+
+	public void AwardPoints(int points, Vector3 position) {
+		Bubble.DisplayMessage(points.ToString("+#;-#"), position);
+		this.Score += points;
 	}
 }
