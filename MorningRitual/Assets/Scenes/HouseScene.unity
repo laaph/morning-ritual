@@ -944,13 +944,14 @@ GameObject:
   - 212: {fileID: 937211177}
   - 114: {fileID: 937211176}
   - 60: {fileID: 937211178}
+  - 114: {fileID: 937211179}
   m_Layer: 0
   m_Name: readnewspaperButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &937211175
 Transform:
   m_ObjectHideFlags: 0
@@ -974,8 +975,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7d35fc93a5c14a60809566bc282821d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newspaper1: {fileID: 960750424}
-  newspaper2: {fileID: 1406232244}
+  newspaperLate: {fileID: 960750424}
+  newspaperCoffee: {fileID: 1406232244}
 --- !u!212 &937211177
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1026,6 +1027,21 @@ PolygonCollider2D:
       - {x: 0.995, y: -0.225}
       - {x: 1.025, y: -0.21499999}
       - {x: 1.025, y: 0.225}
+--- !u!114 &937211179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 937211174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 137d489da239d4a7b8248610f34b4aa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  glowColor: {r: 1, g: 0, b: 0, a: 1}
+  onClickMessage: 
+  onClickPoints: 0
+  deactivateOnClick: 0
 --- !u!1 &960750424
 GameObject:
   m_ObjectHideFlags: 0
@@ -1037,7 +1053,7 @@ GameObject:
   - 212: {fileID: 960750426}
   - 114: {fileID: 960750427}
   m_Layer: 0
-  m_Name: mr_newspaper1
+  m_Name: mr_newspaper Late
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1704,7 +1720,7 @@ GameObject:
   - 60: {fileID: 1406232248}
   - 114: {fileID: 1406232247}
   m_Layer: 0
-  m_Name: mr_newspaper2
+  m_Name: mr_newspaper Coffee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
