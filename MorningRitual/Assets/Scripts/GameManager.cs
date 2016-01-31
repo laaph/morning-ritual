@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour {
 	public bool pickedUpNewspaper = false;
 	public bool tookShower = false;
 	public bool hadCoffee = false;
+	public int  gameTimeCounter = 0;
 
 	/// <summary>
 	/// Get the global GameManager instance.
@@ -36,6 +37,19 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 
+	public delegate void GameTimeAction();
+	public event GameTimeAction GameTimeDidChange;
+	private int GameTimeValue;
+	public int GameTime {
+		get { return this.GameTimeValue; }
+		private set {
+			if (value != this.GameTimeValue) {
+				this.GameTimeValue = value;
+				this.GameTimeDidChange.Invoke();
+			}
+		}
+	}
+
 	// Use this for initialization
 	void Start () {
 		this.Score = 0;
@@ -54,6 +68,10 @@ public class GameManager : MonoBehaviour {
 	public void AwardPoints(int points, Vector3 position) {
 		Bubble.DisplayMessage(points.ToString("+#;-#"), position);
 		this.Score += points;
+	}
+
+	public void AddTime(int minutes){
+		timeCounter = timeCounter + minutes;
 	}
 
 	public void ShowMessage(string message) {
