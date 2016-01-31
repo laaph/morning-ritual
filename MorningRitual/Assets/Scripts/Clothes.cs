@@ -24,5 +24,6 @@ public class Clothes : MonoBehaviour {
 			GameManager.Instance.ShowMessage("I should have taken a shower first.");
 			GameManager.Instance.AwardPoints(30, this.transform.position);
 		}
+		gameObject.SetActive(false);
 	}
 }
