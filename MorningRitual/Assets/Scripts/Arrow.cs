@@ -12,6 +12,7 @@ public class Arrow : MonoBehaviour {
 			delegate() {
 				nextRoom.gameObject.SetActive(true);
 			});
+		gameObject.GetComponentInChildren<Renderer>().material.color = Color.white;
 		gameObject.transform.parent.gameObject.SetActive(false);
 	}
 }
