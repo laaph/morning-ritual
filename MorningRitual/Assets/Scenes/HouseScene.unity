@@ -572,7 +572,7 @@ MonoBehaviour:
   rotRange: {x: 0, y: 0, z: 10}
   snoozeButton: {fileID: 1773958532}
   offButton: {fileID: 1799099018}
-  anim: {fileID: 9100000, guid: 32953956eb6d84fb9948c3aadff1c85c, type: 2}
+  snoozeCoverScreen: {fileID: 155326, guid: 69cbcbb132c0a43c9acdd221512c4b9d, type: 2}
 --- !u!1001 &482862159
 Prefab:
   m_ObjectHideFlags: 0
@@ -2361,6 +2361,84 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d165db99d7a864b738970120be64a8e1, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &1690384695
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 11167004, guid: 69cbcbb132c0a43c9acdd221512c4b9d, type: 2}
+      propertyPath: m_Animations.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 497754, guid: 69cbcbb132c0a43c9acdd221512c4b9d, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 4.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 497754, guid: 69cbcbb132c0a43c9acdd221512c4b9d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -3.132812
+      objectReference: {fileID: 0}
+    - target: {fileID: 497754, guid: 69cbcbb132c0a43c9acdd221512c4b9d, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -6.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 497754, guid: 69cbcbb132c0a43c9acdd221512c4b9d, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 497754, guid: 69cbcbb132c0a43c9acdd221512c4b9d, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 497754, guid: 69cbcbb132c0a43c9acdd221512c4b9d, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 497754, guid: 69cbcbb132c0a43c9acdd221512c4b9d, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 497754, guid: 69cbcbb132c0a43c9acdd221512c4b9d, type: 2}
+      propertyPath: m_RootOrder
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 11167004, guid: 69cbcbb132c0a43c9acdd221512c4b9d, type: 2}
+      propertyPath: m_Animations.Array.data[1]
+      value: 
+      objectReference: {fileID: 7400000, guid: d7b036cd5afb04e97a76310283279a95, type: 2}
+    - target: {fileID: 11167004, guid: 69cbcbb132c0a43c9acdd221512c4b9d, type: 2}
+      propertyPath: m_Animations.Array.data[0]
+      value: 
+      objectReference: {fileID: 7400000, guid: d627644cb5863479fa4f4efb6af67823, type: 2}
+    - target: {fileID: 11167004, guid: 69cbcbb132c0a43c9acdd221512c4b9d, type: 2}
+      propertyPath: m_Animation
+      value: 
+      objectReference: {fileID: 7400000, guid: d627644cb5863479fa4f4efb6af67823, type: 2}
+    - target: {fileID: 11167004, guid: 69cbcbb132c0a43c9acdd221512c4b9d, type: 2}
+      propertyPath: m_AnimatePhysics
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 155326, guid: 69cbcbb132c0a43c9acdd221512c4b9d, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11167004, guid: 69cbcbb132c0a43c9acdd221512c4b9d, type: 2}
+      propertyPath: m_PlayAutomatically
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 21209570, guid: 69cbcbb132c0a43c9acdd221512c4b9d, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 21209570, guid: 69cbcbb132c0a43c9acdd221512c4b9d, type: 2}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 69cbcbb132c0a43c9acdd221512c4b9d, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &1764635530
 Prefab:
   m_ObjectHideFlags: 0
@@ -2368,6 +2446,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11110706, guid: ce024f7035e5e4840975d208ff98487f, type: 2}
+      propertyPath: m_Animations.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 477282, guid: ce024f7035e5e4840975d208ff98487f, type: 2}
       propertyPath: m_LocalPosition.x
       value: 4.88
@@ -2402,8 +2484,20 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 129398, guid: ce024f7035e5e4840975d208ff98487f, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11110706, guid: ce024f7035e5e4840975d208ff98487f, type: 2}
+      propertyPath: m_Animation
+      value: 
+      objectReference: {fileID: 7400000, guid: 26be84d1b539243ff8795babbb5b80af, type: 2}
+    - target: {fileID: 11110706, guid: ce024f7035e5e4840975d208ff98487f, type: 2}
+      propertyPath: m_Animations.Array.data[1]
+      value: 
+      objectReference: {fileID: 7400000, guid: 26be84d1b539243ff8795babbb5b80af, type: 2}
+    - target: {fileID: 11110706, guid: ce024f7035e5e4840975d208ff98487f, type: 2}
+      propertyPath: m_Animations.Array.data[0]
+      value: 
+      objectReference: {fileID: 7400000, guid: 26be84d1b539243ff8795babbb5b80af, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce024f7035e5e4840975d208ff98487f, type: 2}
   m_IsPrefabParent: 0

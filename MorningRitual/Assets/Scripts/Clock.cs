@@ -10,6 +10,7 @@ public class Clock : MonoBehaviour {
 	public Vector3 rotRange = new Vector3(0f, 0f, 10f);
 	public GameObject snoozeButton;
 	public GameObject offButton;
+	public GameObject snoozeCoverScreen;
 
 	float timeStart;
 	Vector3 startPos;
@@ -72,6 +73,8 @@ public class Clock : MonoBehaviour {
 	}
 	public void SnoozeAlarm() {
 		Debug.Log("click snooze");
-		//Stub TODO
+		alarmRinging = false;
+		snoozeCoverScreen.SetActive(true);
+		HideGUI();
 	}
 }
