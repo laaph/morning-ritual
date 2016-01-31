@@ -4,21 +4,18 @@ using System.Collections;
 	
 
 public class Arrow : MonoBehaviour {
-
 	public GameObject nextRoom;
 
-	// Use this for initialization
-	void Start () {
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 	void OnMouseDown() {
-		nextRoom.SetActive(true);
-		Camera.main.transform.position = nextRoom.GetComponentInChildren<RoomObjectManager>().cameraPosition;
+		Camera.main.GetComponent<CameraMovement>().MoveTo(
+			nextRoom.GetComponentInChildren <RoomObjectManager>().cameraPosition,
+			delegate() {
+				nextRoom.gameObject.SetActive(true);
+			});
 		gameObject.transform.parent.gameObject.SetActive(false);
 	}
-
 }
+
+
+
+//Camera.main.transform.position = nextRoom.GetComponentInChildren<RoomObjectManager>().cameraPosition;
