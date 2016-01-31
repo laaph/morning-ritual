@@ -572,6 +572,7 @@ MonoBehaviour:
   rotRange: {x: 0, y: 0, z: 10}
   snoozeButton: {fileID: 1773958532}
   offButton: {fileID: 1799099018}
+  anim: {fileID: 9100000, guid: 32953956eb6d84fb9948c3aadff1c85c, type: 2}
 --- !u!1001 &482862159
 Prefab:
   m_ObjectHideFlags: 0
@@ -669,6 +670,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   glowColor: {r: 1, g: 0, b: 0, a: 1}
+  onClickMessage: 
+  onClickPoints: 0
 --- !u!212 &648332031
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1237,6 +1240,10 @@ Prefab:
     - target: {fileID: 499884, guid: 3a09f79911af34c43b26afafda8e0e58, type: 2}
       propertyPath: m_RootOrder
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 11457056, guid: 3a09f79911af34c43b26afafda8e0e58, type: 2}
+      propertyPath: onClickMessage
+      value: I don't really like the radio.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3a09f79911af34c43b26afafda8e0e58, type: 2}
@@ -2126,6 +2133,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 11410272, guid: 681d02af8a00e468bb3f1e30463910f4, type: 2}
+      propertyPath: onClickMessage
+      value: I much prefer news from thepaper than the TV.
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 681d02af8a00e468bb3f1e30463910f4, type: 2}
   m_IsPrefabParent: 0
@@ -2391,7 +2402,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 129398, guid: ce024f7035e5e4840975d208ff98487f, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce024f7035e5e4840975d208ff98487f, type: 2}
@@ -2427,6 +2438,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   glowColor: {r: 0.64705884, g: 0.64705884, b: 0.64705884, a: 1}
+  onClickMessage: 
+  onClickPoints: 0
 --- !u!212 &1773958534
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2535,6 +2548,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   glowColor: {r: 0.75735295, g: 0.75735295, b: 0.75735295, a: 1}
+  onClickMessage: 
+  onClickPoints: 0
 --- !u!212 &1799099020
 SpriteRenderer:
   m_ObjectHideFlags: 0
