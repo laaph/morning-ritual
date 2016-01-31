@@ -20,6 +20,11 @@ public class Arrow : MonoBehaviour {
 			GameManager.Instance.ShowMessage(addText);
 			addText = "";
 		}
+		GameObject player = GameObject.FindGameObjectWithTag("Player");
+		if(player != null) { // Can be null when player is not active
+			player.transform.position = nextRoom.GetComponentInChildren<RoomObjectManager>().galePosition;
+			player.SetActive(true);
+		}
 	}
 }
 
