@@ -18,7 +18,7 @@ public class CameraMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (ismoving) {
-			float t = (Time.time - startTime) / deltaTime;
+			float t = deltaTime > 1e-3 ? (Time.time - startTime) / deltaTime : 1.0f;
 			if (t >= 1) {
 				ismoving = false;
 				Camera.main.transform.position = nextCameraPosition;
