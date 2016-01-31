@@ -63,7 +63,7 @@ public class Mug : MonoBehaviour {
 			case State.TooHot:
 				GameManager.Instance.ShowMessage("Ouch, that coffee is HOT!");
 				clip = this.audioHot;
-				points = -50;
+				GameManager.Instance.AwardPoints(-50, transform.position);
 				break;
 			case State.JustRight:
 				GameManager.Instance.ShowMessage("Nice, that sure was coffee!");
@@ -75,7 +75,7 @@ public class Mug : MonoBehaviour {
 			case State.TooCold:
 				GameManager.Instance.ShowMessage("That coffee is cold and heartless, like my ex!");
 				clip = this.audioYuck;
-				points = -25;
+				GameManager.Instance.AwardPoints(-25, transform.position);
 				break;
 		}
 		if (points != 0) {
