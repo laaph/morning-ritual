@@ -4,9 +4,12 @@ using System.Collections;
 public class Clock : MonoBehaviour {
 
 	public bool alarmRinging = true;
+	public bool inBed = true;
 	public float frequency = 0.1f;
 	public Vector3 posRange = new Vector3(0.1f, 0.1f, 0f);
 	public Vector3 rotRange = new Vector3(0f, 0f, 10f);
+	public GameObject snoozeButton;
+	public GameObject offButton;
 
 	float timeStart;
 	Vector3 startPos;
@@ -37,5 +40,37 @@ public class Clock : MonoBehaviour {
         transform.position = toPos;
         transform.rotation = Quaternion.Euler(new Vector3(0,0, toRot.z));
         timeStart = Time.time;
+	}
+
+	void OnMouseDown() {
+		if(alarmRinging) {
+			if(inBed) {
+				ShowGUI(snoozeButton, transform.position + new Vector3(2.0f, 0.5f, 0f));
+				ShowGUI(offButton, transform.position + new Vector3(2.0f, -0.5f, 0f));
+			} else {
+				ShowGUI(offButton, transform.position + new Vector3(2.0f, 0.5f, 0f));
+			}
+		}
+	}
+
+	void ShowGUI(GameObject button, Vector3 position) {
+	//	Vector3 pos = Camera.main.WorldToScreenPoint(position);
+	//	button.transform.position = pos;
+		button.SetActive(true);
+	}
+
+	public void HideGUI() {
+		snoozeButton.SetActive(false);
+		offButton.SetActive(false);
+	}
+	public void TurnOffAlarm() {
+		HideGUI();
+		alarmRinging = false;
+		transform.position = startPos;
+		transform.rotation = startRot;
+	}
+	public void SnoozeAlarm() {
+		Debug.Log("click snooze");
+		//Stub TODO
 	}
 }
