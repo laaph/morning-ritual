@@ -33,7 +33,6 @@ public class Mug : MonoBehaviour {
 			this.spill.SetActive(false);
 		}
 		this.UpdateSteam();
-		GameManager.Instance.AddGameTime (gameTime);
 	}
 	
 	// Update is called once per frame
@@ -57,7 +56,6 @@ public class Mug : MonoBehaviour {
 
 	void OnMouseDown() {
 		AudioClip clip = null;
-		int points = 0;
 		switch (this.state) {
 			case State.Empty:
 				GameManager.Instance.ShowMessage("This cup is empty, like my life.");
@@ -82,9 +80,6 @@ public class Mug : MonoBehaviour {
 				clip = this.audioYuck;
 				GameManager.Instance.AwardPoints(-25, transform.position);
 				break;
-		}
-		if (points != 0) {
-			GameManager.Instance.AwardPoints(points, this.transform.position);
 		}
 		if (clip) {
 			var source = this.GetComponent<AudioSource>();
