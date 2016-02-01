@@ -7,7 +7,7 @@ public class UserObjectCommonFunctions : MonoBehaviour {
 	public string onClickMessage = "";
 	public int 	  onClickPoints  = 0;
 	public bool   deactivateOnClick = false;
-	public int	  addTime = 0;
+	public int	  addTime = 3;
 
 
 	// Use this for initialization

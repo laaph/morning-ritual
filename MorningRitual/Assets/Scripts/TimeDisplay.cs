@@ -13,6 +13,11 @@ public class TimeDisplay : MonoBehaviour {
 	}
 
 	void OnTimeChanged() {
-		this.text.text = string.Format("Time: {0}", GameManager.Instance.GameTime);
+		int minutes = GameManager.Instance.GameTime;
+		if (minutes > 9) {
+			this.text.text = string.Format ("Time: 7:{0}", GameManager.Instance.GameTime);
+		} else {
+			this.text.text = string.Format ("Time: 7:0{0}", GameManager.Instance.GameTime);
+		}
 	}
 }

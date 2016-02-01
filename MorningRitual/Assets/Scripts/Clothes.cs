@@ -4,7 +4,7 @@ using System.Collections;
 public class Clothes : MonoBehaviour {
 
 	public Sprite newClothes;
-	public int gameTime = 2;
+	public int gameTime = 4;
 
 	// Use this for initialization
 	void Start () {

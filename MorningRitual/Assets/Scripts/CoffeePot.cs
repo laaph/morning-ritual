@@ -3,7 +3,7 @@ using System.Collections;
 
 public class CoffeePot : MonoBehaviour {
 	public Mug mug;
-	public int gameTime = 4;
+	public int gameTime = 6;
 
 	void Start() {
 		if (!mug) {

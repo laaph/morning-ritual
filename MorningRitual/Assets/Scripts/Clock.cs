@@ -76,6 +76,8 @@ public class Clock : MonoBehaviour {
 	public void SnoozeAlarm() {
 		Debug.Log("click snooze");
 		alarmRinging = false;
+		gameTime = 10;
+		GameManager.Instance.AddGameTime (gameTime);
 		snoozeCoverScreen.SetActive(true);
 		HideGUI();
 	}
