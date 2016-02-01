@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+public int gameTime = 2;
 
 public class Clothes : MonoBehaviour {
 
@@ -24,6 +25,7 @@ public class Clothes : MonoBehaviour {
 			GameManager.Instance.ShowMessage("I should have taken a shower first.");
 			GameManager.Instance.AwardPoints(30, this.transform.position);
 		}
+		GameManager.Instance.AddGameTime (gameTime);
 		gameObject.SetActive(false);
 	}
 }

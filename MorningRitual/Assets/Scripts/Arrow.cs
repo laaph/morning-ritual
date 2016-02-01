@@ -6,6 +6,7 @@ using System.Collections;
 public class Arrow : MonoBehaviour {
 	public GameObject nextRoom;
 	public string addText;
+	public int gameTime = 1;
 
 	void OnMouseDown() {
 		Camera.main.GetComponent<CameraMovement>().MoveTo(
@@ -24,6 +25,7 @@ public class Arrow : MonoBehaviour {
 		if(player != null) { // Can be null when player is not active
 			player.transform.position = nextRoom.GetComponentInChildren<RoomObjectManager>().galePosition;
 			player.SetActive(true);
+			GameManager.Instance.AddGameTime (gameTime);
 		}
 	}
 }

@@ -11,6 +11,7 @@ public class Clock : MonoBehaviour {
 	public GameObject snoozeButton;
 	public GameObject offButton;
 	public GameObject snoozeCoverScreen;
+	public int gameTime = 1;
 
 	float timeStart;
 	Vector3 startPos;
@@ -70,11 +71,14 @@ public class Clock : MonoBehaviour {
 		alarmRinging = false;
 		transform.position = startPos;
 		transform.rotation = startRot;
+		GameManager.Instance.AddGameTime (gameTime);
 	}
 	public void SnoozeAlarm() {
 		Debug.Log("click snooze");
 		alarmRinging = false;
 		snoozeCoverScreen.SetActive(true);
 		HideGUI();
+		gameTime = 10;
+		GameManager.Instance.AddGameTime (gameTime);
 	}
 }

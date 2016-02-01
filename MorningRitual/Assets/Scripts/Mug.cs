@@ -17,6 +17,7 @@ public class Mug : MonoBehaviour {
 	public float cooldownTime1 = 4.0f;
 	public float cooldownTime2 = 4.0f;
 	public AudioClip audioPour, audioSpill, audioHot, audioYuck, audioYum;
+	public int gameTime = 3;
 
 	// Use this for initialization
 	void Start () {
@@ -32,6 +33,7 @@ public class Mug : MonoBehaviour {
 			this.spill.SetActive(false);
 		}
 		this.UpdateSteam();
+		GameManager.Instance.AddGameTime (gameTime);
 	}
 	
 	// Update is called once per frame

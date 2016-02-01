@@ -4,7 +4,7 @@ using System.Collections;
 public class Newspaper : MonoBehaviour {
 
 	public GameObject newspaperButton;
-
+	public int gameTime = 5;
 	// Use this for initialization
 	void Start () {
 		if (!this.newspaperButton) {
@@ -20,7 +20,7 @@ public class Newspaper : MonoBehaviour {
 		GameManager.Instance.pickedUpNewspaper = true;
 		GameManager.Instance.ShowMessage("I much prefer the newspaper to the\nradio or telly");
 		GameManager.Instance.AwardPoints(10, transform.position);
-		GameManager.Instance.AddGameTime (4);
+		GameManager.Instance.AddGameTime (gameTime);
 		newspaperButton.SetActive(true);
 		gameObject.SetActive(false);
 	}

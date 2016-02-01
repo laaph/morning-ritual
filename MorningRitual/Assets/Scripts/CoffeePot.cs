@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+public int gameTime = 4;
 
 public class CoffeePot : MonoBehaviour {
 	public Mug mug;
@@ -15,5 +16,6 @@ public class CoffeePot : MonoBehaviour {
 			return;
 		}
 		mug.AddCoffee();
+		GameManager.Instance.AddGameTime (gameTime);
 	}
 }
