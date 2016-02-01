@@ -7,6 +7,7 @@ public class UserObjectCommonFunctions : MonoBehaviour {
 	public string onClickMessage = "";
 	public int 	  onClickPoints  = 0;
 	public bool   deactivateOnClick = false;
+	public int	  addTime = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -35,6 +36,9 @@ public class UserObjectCommonFunctions : MonoBehaviour {
 		if(onClickPoints  !=  0) {
 			GameManager.Instance.AwardPoints(onClickPoints, transform.position);
 			onClickPoints = 0;
+		}
+		if(addTime > 0) {
+			GameManager.Instance.AddTime(1);
 		}
 		if(deactivateOnClick) {
 			gameObject.SetActive(false);

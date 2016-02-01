@@ -13,6 +13,6 @@ public class ScoreDisplay : MonoBehaviour {
 	}
 	
 	void OnScoreChanged() {
-		this.text.text = string.Format("Score: {0}", GameManager.Instance.Score);
+		this.text.text = string.Format("Score: {0}\n", GameManager.Instance.Score);
 	}
 }
