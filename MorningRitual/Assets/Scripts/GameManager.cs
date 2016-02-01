@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour {
 		private set {
 			if (value != this.gameTimeValue) {
 				this.gameTimeValue = value;
-				this.GameTimeDidChange.Invoke();
+// 				this.GameTimeDidChange.Invoke();
 			}
 		}
 	}
