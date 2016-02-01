@@ -8,7 +8,6 @@ public class GameManager : MonoBehaviour {
 	public bool pickedUpNewspaper = false;
 	public bool tookShower = false;
 	public bool hadCoffee = false;
-//	public int  gameTimeCounter = 0;
 
 	/// <summary>
 	/// Get the global GameManager instance.
@@ -39,12 +38,12 @@ public class GameManager : MonoBehaviour {
 
 	public delegate void GameTimeAction();
 	public event GameTimeAction GameTimeDidChange;
-	private int GameTimeValue;
+	private int gameTimeValue;
 	public int GameTime {
-		get { return this.GameTimeValue; }
+		get { return this.gameTimeValue; }
 		private set {
-			if (value != this.GameTimeValue) {
-				this.GameTimeValue = value;
+			if (value != this.gameTimeValue) {
+				this.gameTimeValue = value;
 				this.GameTimeDidChange.Invoke();
 			}
 		}
@@ -53,6 +52,7 @@ public class GameManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		this.Score = 0;
+		this.GameTime = 0;
 	}
 	
 	// Update is called once per frame
@@ -71,7 +71,7 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void AddGameTime(int minutes){
-		GameTime = GameTime + minutes;
+		this.GameTime += minutes;
 	}
 
 	public void ShowMessage(string message) {

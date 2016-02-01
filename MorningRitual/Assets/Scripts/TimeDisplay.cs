@@ -2,17 +2,17 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class GameTimeDisplay : MonoBehaviour {
+public class TimeDisplay : MonoBehaviour {
 	private Text text;
 
 	// Use this for initialization
 	void Start () {
 		this.text = GetComponent<Text>();
-		GameManager.Instance.ScoreDidChange += this.OnScoreChanged;
-		this.OnScoreChanged();
+		GameManager.Instance.GameTimeDidChange += this.OnTimeChanged;
+		this.OnTimeChanged();
 	}
 
-	void OnScoreChanged() {
-		this.text.text = string.Format("Score: {0}", GameManager.Instance.Score);
+	void OnTimeChanged() {
+		this.text.text = string.Format("Time: {0}", GameManager.Instance.GameTime);
 	}
 }
