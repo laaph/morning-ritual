@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class CatScript : MonoBehaviour {
-
+	public int gameTime = 2;
 	bool catPet = false;
 	// Use this for initialization
 	void Start () {
@@ -14,6 +14,7 @@ public class CatScript : MonoBehaviour {
 	
 	}
 	void OnMouseDown() { 
+		GameManager.Instance.AddGameTime (gameTime);
 		if(!catPet) {
 			GameManager.Instance.ShowMessage("Oh what a cute kitten!");
 			GameManager.Instance.AwardPoints(50, this.transform.position);
