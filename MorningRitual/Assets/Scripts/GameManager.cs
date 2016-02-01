@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour {
 	public bool pickedUpNewspaper = false;
 	public bool tookShower = false;
 	public bool hadCoffee = false;
-	public int  gameTimeCounter = 0;
+//	public int  gameTimeCounter = 0;
 
 	/// <summary>
 	/// Get the global GameManager instance.
@@ -70,8 +70,8 @@ public class GameManager : MonoBehaviour {
 		this.Score += points;
 	}
 
-	public void AddTime(int minutes){
-		gameTimeCounter = gameTimeCounter + minutes;
+	public void AddGameTime(int minutes){
+		GameTime = GameTime + minutes;
 	}
 
 	public void ShowMessage(string message) {

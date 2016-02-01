@@ -39,7 +39,7 @@ public class UserObjectCommonFunctions : MonoBehaviour {
 			onClickPoints = 0;
 		}
 		if(addTime > 0) {
-			GameManager.Instance.AddTime(addTime);
+			GameManager.Instance.AddGameTime(addTime);
 		}
 		if(deactivateOnClick) {
 			gameObject.SetActive(false);

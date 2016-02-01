@@ -590,6 +590,7 @@ MonoBehaviour:
   snoozeButton: {fileID: 1773958532}
   offButton: {fileID: 1799099018}
   snoozeCoverScreen: {fileID: 827047824}
+  gameTime: 1
 --- !u!1001 &482862159
 Prefab:
   m_ObjectHideFlags: 0
@@ -690,6 +691,7 @@ MonoBehaviour:
   onClickMessage: 
   onClickPoints: 0
   deactivateOnClick: 0
+  addTime: 0
 --- !u!212 &648332031
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -762,6 +764,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newClothes: {fileID: 21300000, guid: 18aaa01b93a6d4a428b76830f303a6cd, type: 3}
+  gameTime: 2
 --- !u!4 &710177354 stripped
 Transform:
   m_PrefabParentObject: {fileID: 474956, guid: d165db99d7a864b738970120be64a8e1, type: 2}
@@ -1059,6 +1062,7 @@ MonoBehaviour:
   onClickMessage: 
   onClickPoints: 0
   deactivateOnClick: 0
+  addTime: 0
 --- !u!1 &960750424
 GameObject:
   m_ObjectHideFlags: 0
@@ -1133,6 +1137,7 @@ MonoBehaviour:
   onClickMessage: 
   onClickPoints: 25
   deactivateOnClick: 1
+  addTime: 0
 --- !u!1 &985046528
 GameObject:
   m_ObjectHideFlags: 0
@@ -1248,6 +1253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newspaperButton: {fileID: 937211174}
+  gameTime: 5
 --- !u!60 &987526042
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1800,6 +1806,7 @@ MonoBehaviour:
   onClickMessage: 
   onClickPoints: 25
   deactivateOnClick: 1
+  addTime: 0
 --- !u!60 &1406232248
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2537,7 +2544,6 @@ MonoBehaviour:
   pickedUpNewspaper: 0
   tookShower: 0
   hadCoffee: 0
-  timeCounter: 0
 --- !u!4 &1517031562
 Transform:
   m_ObjectHideFlags: 0
@@ -2567,6 +2573,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   galeSleeping: {fileID: 1642069908}
   galeStanding: {fileID: 199361067}
+  gameTime: 1
 --- !u!1001 &1612232560
 Prefab:
   m_ObjectHideFlags: 0
@@ -2926,8 +2933,9 @@ GameObject:
   - 224: {fileID: 1690759053}
   - 222: {fileID: 1690759055}
   - 114: {fileID: 1690759054}
+  - 114: {fileID: 1690759056}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Time
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2989,6 +2997,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1690759052}
+--- !u!114 &1690759056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1690759052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf4e0d554731747c2ab7721dc8d95125, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1764635530
 Prefab:
   m_ObjectHideFlags: 0
@@ -3085,6 +3104,7 @@ MonoBehaviour:
   onClickMessage: 
   onClickPoints: 0
   deactivateOnClick: 0
+  addTime: 0
 --- !u!212 &1773958534
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3196,6 +3216,7 @@ MonoBehaviour:
   onClickMessage: 
   onClickPoints: 0
   deactivateOnClick: 0
+  addTime: 0
 --- !u!212 &1799099020
 SpriteRenderer:
   m_ObjectHideFlags: 0

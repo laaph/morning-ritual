@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
-public int gameTime = 2;
 
 public class Clothes : MonoBehaviour {
 
 	public Sprite newClothes;
+	public int gameTime = 2;
+
 	// Use this for initialization
 	void Start () {
 	

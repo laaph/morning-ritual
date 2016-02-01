@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
-public int gameTime = 4;
 
 public class CoffeePot : MonoBehaviour {
 	public Mug mug;
+	public int gameTime = 4;
 
 	void Start() {
 		if (!mug) {

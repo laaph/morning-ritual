@@ -16,7 +16,7 @@ public class AnimationScript : MonoBehaviour {
 		gameObject.SetActive(false);
 		GameObject a = GameObject.FindGameObjectWithTag("AlarmClock");
 		Clock script = a.GetComponentInChildren<Clock>();
-		GameManager.Instance.AddTime(5);
+		GameManager.Instance.AddGameTime(5);
 		script.alarmRinging = true;
 	}
 }

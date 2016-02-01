@@ -78,7 +78,5 @@ public class Clock : MonoBehaviour {
 		alarmRinging = false;
 		snoozeCoverScreen.SetActive(true);
 		HideGUI();
-		gameTime = 10;
-		GameManager.Instance.AddGameTime (gameTime);
 	}
 }
