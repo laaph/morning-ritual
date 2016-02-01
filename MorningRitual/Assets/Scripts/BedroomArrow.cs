@@ -4,6 +4,7 @@ using System.Collections;
 public class BedroomArrow : MonoBehaviour {
 	public GameObject galeSleeping;
 	public GameObject galeStanding;
+	public int gameTime = 1;
 	// Use this for initialization
 	void Start () {
 	
@@ -18,6 +19,7 @@ public class BedroomArrow : MonoBehaviour {
 		galeStanding.SetActive(true);
 		GameObject c = GameObject.FindGameObjectWithTag("AlarmClock");
 		Clock s = c.GetComponentInChildren<Clock>();
+		GameManager.Instance.AddGameTime (gameTime);
 		if(s.alarmRinging){
 			GameManager.Instance.ShowMessage("That alarm needs to stop now...");
 		} else {

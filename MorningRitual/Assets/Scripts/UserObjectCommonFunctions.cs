@@ -9,6 +9,7 @@ public class UserObjectCommonFunctions : MonoBehaviour {
 	public bool   deactivateOnClick = false;
 	public int	  addTime = 0;
 
+
 	// Use this for initialization
 	void Start () {
 		rend = GetComponent<Renderer>();
@@ -38,7 +39,7 @@ public class UserObjectCommonFunctions : MonoBehaviour {
 			onClickPoints = 0;
 		}
 		if(addTime > 0) {
-			GameManager.Instance.AddTime(1);
+			GameManager.Instance.AddTime(addTime);
 		}
 		if(deactivateOnClick) {
 			gameObject.SetActive(false);
